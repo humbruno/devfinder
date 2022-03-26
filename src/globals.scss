@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+:root {
+  --primary: #fff;
+  --secondary: #0079ff;
+
+  --lightCardBody: #fefefe;
+  --lightCardAccent: #f6f8ff;
+  --lightTextPrimary: #4b6a9b;
+  --lightTextSecondary: #2b3442;
+  --lightHeader: #222731;
+
+  --darkHeader: #90a4d4;
+  --darkCardBody: #1e2a47;
+  --darkCardAccent: #141d2f;
+  --warning: #f74646;
+
+  --font: "Space Mono", monospace; // weights 400 700
+}
