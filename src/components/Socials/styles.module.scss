@@ -1,0 +1,19 @@
+.container {
+  width: 100%;
+  display: flex;
+  margin-top: 40px;
+  justify-content: space-between;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  span {
+    color: #4b6a9b;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+}

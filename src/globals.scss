@@ -1,4 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+:root {
+  --primary: #fff;
+  --secondary: #0079ff;
+
+  --lightHeadings: #2b3442;
+  --lightTextPrimary: #4b6a9b;
+  --lightTextSecondary: #697c9a;
+
+  --lightCardBody: #fefefe;
+  --lightCardAccent: #f6f8ff;
+  //--lightHeader: #222731;
+
+  --warning: #f74646;
+
+  --font: "Space Mono", monospace; // weights 400 700
+}
 
 * {
   margin: 0;
@@ -8,6 +24,20 @@
 
 html {
   font-size: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f6f8ff;
+}
+
+body,
+input,
+button {
+  font-family: var(--font);
 }
 
 a {
@@ -23,20 +53,19 @@ button {
   }
 }
 
-:root {
-  --primary: #fff;
-  --secondary: #0079ff;
+.container {
+  max-width: 730px;
+  margin: 0 15px;
+}
 
-  --lightCardBody: #fefefe;
-  --lightCardAccent: #f6f8ff;
-  --lightTextPrimary: #4b6a9b;
-  --lightTextSecondary: #2b3442;
-  --lightHeader: #222731;
+@media (max-width: 63.9375em) {
+  .container {
+    max-width: 573px;
+  }
+}
 
-  --darkHeader: #90a4d4;
-  --darkCardBody: #1e2a47;
-  --darkCardAccent: #141d2f;
-  --warning: #f74646;
-
-  --font: "Space Mono", monospace; // weights 400 700
+@media (max-width: 39.9375em) {
+  .container {
+    max-width: 327px;
+  }
 }
