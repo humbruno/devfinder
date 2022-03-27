@@ -9,17 +9,17 @@ const Stats = () => {
     <div className={styles.container}>
       <div>
         <h3>Repos</h3>
-        <strong>{user.public_repos}</strong>
+        <p>{user.public_repos}</p>
       </div>
 
       <div>
         <h3>Followers</h3>
-        <strong>{user.followers}</strong>
+        <p>{user.followers}</p>
       </div>
 
       <div>
         <h3>Following</h3>
-        <strong>{user.following}</strong>
+        <p>{user.following}</p>
       </div>
     </div>
   );

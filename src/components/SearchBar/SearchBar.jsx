@@ -34,14 +34,14 @@ const SearchBar = () => {
 
   return (
     <div className={styles.container}>
-      <FaSearch size={24} style={{ color: "var(--secondary)" }} />
+      <FaSearch size={20} style={{ color: "var(--secondary)" }} />
       <form onSubmit={handleFormSubmit}>
         <input
           onChange={handleInputChange}
           type="text"
           name="userName"
           id="userName"
-          placeholder="Search GitHub username..."
+          placeholder="Search GitHub username"
         />
         <span style={{ color: "var(--warning)" }}>
           {profileFound ? null : "No results"}

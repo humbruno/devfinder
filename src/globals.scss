@@ -1,16 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
 :root {
   --primary: #fff;
   --secondary: #0079ff;
 
-  --lightHeadings: #2b3442;
-  --lightTextPrimary: #4b6a9b;
+  --textPrimary: #4b6a9b;
+  --textSecondaryHeadings: #2b3442;
+
   --lightTextSecondary: #697c9a;
-
   --lightCardBody: #fefefe;
-  --lightCardAccent: #f6f8ff;
-  //--lightHeader: #222731;
 
+  --statCardBg: #f6f8ff;
   --warning: #f74646;
 
   --font: "Space Mono", monospace; // weights 400 700
@@ -54,18 +54,18 @@ button {
 }
 
 .container {
-  max-width: 730px;
+  max-width: 327px;
   margin: 0 15px;
 }
 
-@media (max-width: 63.9375em) {
+@media (min-width: 40em) {
   .container {
     max-width: 573px;
   }
 }
 
-@media (max-width: 39.9375em) {
+@media (min-width: 64em) {
   .container {
-    max-width: 327px;
+    max-width: 730;
   }
 }
