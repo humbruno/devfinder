@@ -54,18 +54,18 @@ button {
 }
 
 .container {
-  max-width: 327px;
+  width: 327px;
   margin: 0 15px;
 }
 
 @media (min-width: 40em) {
   .container {
-    max-width: 573px;
+    width: 573px;
   }
 }
 
 @media (min-width: 64em) {
   .container {
-    max-width: 730;
+    width: 730px;
   }
 }

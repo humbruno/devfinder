@@ -1,6 +1,6 @@
 import { useContext, useState, useEffect } from "react";
 import { UserContext } from "../../context/UserContext";
-import { FaSearch } from "react-icons/fa";
+import { BsSearch } from "react-icons/bs";
 
 import styles from "./styles.module.scss";
 
@@ -34,7 +34,7 @@ const SearchBar = () => {
 
   return (
     <div className={styles.container}>
-      <FaSearch size={20} style={{ color: "var(--secondary)" }} />
+      <BsSearch size={20} style={{ color: "var(--secondary)" }} />
       <form onSubmit={handleFormSubmit}>
         <input
           onChange={handleInputChange}

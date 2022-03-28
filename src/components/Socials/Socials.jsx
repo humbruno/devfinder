@@ -1,7 +1,8 @@
 import styles from "./styles.module.scss";
 import { useContext } from "react";
 import { UserContext } from "../../context/UserContext";
-import { FaLocationArrow, FaTwitter, FaLink, FaBuilding } from "react-icons/fa";
+import { FaTwitter, FaLink, FaBuilding } from "react-icons/fa";
+import { ImLocation } from "react-icons/im";
 
 const Socials = () => {
   const { user } = useContext(UserContext);
@@ -10,7 +11,7 @@ const Socials = () => {
     <div className={styles.container}>
       <div>
         <span>
-          <FaLocationArrow />{" "}
+          <ImLocation />{" "}
           {user.location !== null ? user.location : "Not Available"}
         </span>
         <span>

@@ -23,11 +23,15 @@ const Card = () => {
         </div>
 
         <div className={styles.profileInfo}>
-          <h2>{user.name} </h2>
-          <a href={user.html_url} target="_blank">
-            @{user.login}
-          </a>
-          <p>Joined {formattedDate(user.created_at)}</p>
+          <div>
+            <h2>{user.name} </h2>
+            <a href={user.html_url} target="_blank">
+              @{user.login}
+            </a>
+          </div>
+          <div>
+            <p>Joined {formattedDate(user.created_at)}</p>
+          </div>
         </div>
       </div>
 

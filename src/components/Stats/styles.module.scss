@@ -37,3 +37,10 @@
     }
   }
 }
+
+@media (min-width: 1024px) {
+  .container {
+    width: 76%;
+    justify-content: flex-start;
+  }
+}
