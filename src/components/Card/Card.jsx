@@ -7,16 +7,36 @@ import Stats from "../Stats/Stats";
 import Socials from "../Socials/Socials";
 
 import styles from "./styles.module.scss";
+import { ThemeContext } from "../../context/ThemeContext";
 
 const Card = () => {
   const { user } = useContext(UserContext);
+
+  const { theme } = useContext(ThemeContext);
+
+  const bodyStyle = {
+    dark: {
+      backgroundColor: "#1E2A47",
+    },
+    light: {
+      backgroundColor: "#fefefe",
+    },
+    common: {
+      transition: "all 150ms ease",
+    },
+  };
+
+  const themeStyle = {
+    ...bodyStyle.common,
+    ...(theme === "light" ? bodyStyle.light : bodyStyle.dark),
+  };
 
   const formattedDate = (date) => {
     return format(new Date(date), "dd' 'MMM' 'yyyy");
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={themeStyle}>
       <div className={styles.profile}>
         <div className={styles.profilePhoto}>
           <img src={user.avatar_url} alt="Profile photo" />

@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import { ThemeProvider } from "./ThemeContext";
 
 export const UserContext = createContext({});
 
@@ -23,10 +24,12 @@ export const UserProvider = ({ children }) => {
   });
 
   return (
-    <UserContext.Provider
-      value={{ user, setUser, profileFound, setProfileFound }}
-    >
-      {children}
-    </UserContext.Provider>
+    <ThemeProvider>
+      <UserContext.Provider
+        value={{ user, setUser, profileFound, setProfileFound }}
+      >
+        {children}
+      </UserContext.Provider>
+    </ThemeProvider>
   );
 };
