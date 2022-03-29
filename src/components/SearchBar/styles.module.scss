@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
 
-  background-color: #fefefe;
   border-radius: 15px;
   padding: 7px 7px 7px 16px;
   margin-bottom: 24px;
@@ -25,8 +24,12 @@
   input {
     border: 0;
     font-size: 0.8125rem; //13px
-    color: var(--lightTextPrimary);
+    background-color: transparent;
     width: 70%;
+
+    &::placeholder {
+      color: inherit;
+    }
 
     &:focus {
       outline: 0;

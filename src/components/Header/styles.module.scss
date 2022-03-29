@@ -2,9 +2,25 @@
   width: 100%;
   align-items: center;
   margin-bottom: 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   h1 {
-    color: var(--lightHeadings);
     font-size: 1.625rem; //26px
+  }
+
+  button {
+    background-color: transparent;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.8125rem; //13px
+    letter-spacing: 0.15625rem; //2.5px
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
   }
 }

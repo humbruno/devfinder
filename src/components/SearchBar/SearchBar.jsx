@@ -1,5 +1,7 @@
 import { useContext, useState, useEffect } from "react";
 import { UserContext } from "../../context/UserContext";
+import { ThemeContext } from "../../context/ThemeContext";
+
 import { BsSearch } from "react-icons/bs";
 
 import styles from "./styles.module.scss";
@@ -10,6 +12,27 @@ const SearchBar = () => {
   const { setUser, setProfileFound, profileFound } = useContext(UserContext);
   const [searchQuery, setSearchQuery] = useState("octocat");
   const [url, setUrl] = useState(`https://api.github.com/users/${searchQuery}`);
+
+  const { theme } = useContext(ThemeContext);
+
+  const inputStyle = {
+    dark: {
+      color: "#fff",
+      backgroundColor: "#1E2A47",
+    },
+    light: {
+      color: "#222731",
+      backgroundColor: "#fefefe",
+    },
+    common: {
+      transition: "all 150ms ease",
+    },
+  };
+
+  const inputThemeStyle = {
+    ...inputStyle.common,
+    ...(theme === "light" ? inputStyle.light : inputStyle.dark),
+  };
 
   useEffect(() => {
     axios
@@ -33,7 +56,7 @@ const SearchBar = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={inputThemeStyle}>
       <BsSearch size={20} style={{ color: "var(--secondary)" }} />
       <form onSubmit={handleFormSubmit}>
         <input
@@ -42,6 +65,7 @@ const SearchBar = () => {
           name="userName"
           id="userName"
           placeholder="Search GitHub username"
+          style={inputThemeStyle}
         />
         <span style={{ color: "var(--warning)" }}>
           {profileFound ? null : "No results"}
