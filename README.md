@@ -1,4 +1,4 @@
-# Frontend Mentor - GitHub user search app solution
+# Devfinder - Search GitHub profiles!
 
 This is a solution to the [GitHub user search app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6).
 
@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - [Repository URL](https://github.com/humbruno/devfinder)
-- [Live Site URL](https://devfinder.brunosantos.dev/m)
+- [Live Site URL](https://devfinder.brunosantos.dev/)
 
 ## My process
 
